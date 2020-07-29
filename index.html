@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BABYLON.MapboxLayer</title>
+    <script src="../../Tools/DevLoader/BabylonLoader.js"></script>
+    <style>
+        html, body {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        .centered {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
+
+    <link href="https://api.mapbox.com/mapbox-assembly/v0.24.0/assembly.min.css" rel="stylesheet">
+    <script async defer src="https://api.mapbox.com/mapbox-assembly/v0.24.0/assembly.js"></script>
+</head>
+<body>
+<div id="map"></div>
+<div class="fixed centered">
+    <div class='select-container'>
+        <label>
+            <select class='select' id="scene-selector">
+                <option value="basic-scene-layer">Basic Scene</option>
+                <option value="gltf-layer">GLTF</option>
+                <option value="light-projected-layer">Light Projected Texture</option>
+                <option value="picking-layer">Cannon</option>
+                <option value="materials-layer">Materials</option>
+                <option value="pbr-layer">PBR</option>
+                <option value="shadow-layer">Shadow</option>
+            </select>
+        </label>
+        <div class='select-arrow'></div>
+    </div>
+    <label class='checkbox-container'>
+        <input type='checkbox' id="debug-layer" />
+        <div class='checkbox mr6'>
+            <svg class='icon'><use xlink:href='#icon-check' /></svg>
+        </div>
+        Debug Layer
+    </label>
+</div>
+
+
+
+
+<script type="module" src="index.js"></script>
+</body>
+</html>
